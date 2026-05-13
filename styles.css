@@ -546,7 +546,7 @@ ul { list-style: none; }
   color: var(--ink);
 }
 .ticker-track i { color: var(--green); font-style: normal; font-size: 0.7rem; }
-@keyframes tickerMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes tickerMove { from { transform: translateX(0); } to { transform: translateX(-25%); } }
 
 /* ================================================================
    ABOUT
