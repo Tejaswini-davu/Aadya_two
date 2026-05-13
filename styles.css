@@ -34,7 +34,7 @@
   --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
 
   /* Spacing */
-  --section-pad:  120px;
+  --section-pad:  88px;
   --max-w:        1280px;
   --gutter:       40px;
 
@@ -512,6 +512,23 @@ ul { list-style: none; }
   overflow: hidden;
   position: relative;
   z-index: 1;
+}
+.ticker::before,
+.ticker::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.ticker::before {
+  left: 0;
+  background: linear-gradient(to right, var(--gold), transparent);
+}
+.ticker::after {
+  right: 0;
+  background: linear-gradient(to left, var(--gold), transparent);
 }
 .ticker-inner { overflow: hidden; }
 .ticker-track {
