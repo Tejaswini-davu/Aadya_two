@@ -1050,6 +1050,15 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   color: #fff;
   box-sizing: border-box;
 }
+.home-hero-eyebrow {
+  display: block;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #f5c96a;
+  margin-bottom: 12px;
+}
 .home-hero-card h1 {
   font-family: var(--serif);
   font-size: clamp(2rem, 5.5vw, 5rem);
