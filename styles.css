@@ -1048,8 +1048,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   color: rgba(255,255,255,.68);
   margin-bottom: 12px;
   opacity: 0;
-  animation: heroSlideUp .6s ease forwards;
-  animation-delay: .75s;
+  animation: heroSlideUp 1s ease forwards;
+  animation-delay: 1s;
 }
 .home-hero-card h1 {
   font-family: var(--serif);
@@ -1059,8 +1059,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   color: #fff;
   margin: 0 0 20px;
   opacity: 0;
-  animation: heroSlideUp .6s ease forwards;
-  animation-delay: .95s;
+  animation: heroSlideUp 1s ease forwards;
+  animation-delay: 1.35s;
 }
 .home-hero-card p {
   font-size: clamp(.88rem, 1.2vw, 1rem);
@@ -1068,8 +1068,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   color: rgba(255,255,255,.78);
   margin-bottom: 30px;
   opacity: 0;
-  animation: heroSlideUp .6s ease forwards;
-  animation-delay: 1.15s;
+  animation: heroSlideUp 1s ease forwards;
+  animation-delay: 1.7s;
 }
 .home-hero-cta {
   background: #e8630a;
@@ -1081,8 +1081,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   text-decoration: none;
   display: inline-block;
   opacity: 0;
-  animation: heroSlideUp .6s ease forwards;
-  animation-delay: 1.35s;
+  animation: heroSlideUp 1s ease forwards;
+  animation-delay: 2.05s;
   transition: background .22s, transform .22s;
 }
 .home-hero-cta:hover {
