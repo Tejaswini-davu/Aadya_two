@@ -1009,11 +1009,18 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transition: opacity 1.4s ease;
+  transform: translateX(100%);
+  transition: transform .6s ease;
   z-index: 0;
 }
-.home-hero-slide.active { opacity: 1; }
+.home-hero-slide.active {
+  transform: translateX(0);
+  z-index: 1;
+}
+.home-hero-slide.exit {
+  transform: translateX(-100%);
+  z-index: 1;
+}
 /* green card — centred, slides in from left edge */
 .home-hero-card {
   position: absolute;

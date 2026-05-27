@@ -1,23 +1,27 @@
-/* --- Hero slideshow + parallax --- */
+/* --- Hero slideshow: next slides in from right, current exits to left --- */
 (function () {
   const slides = document.querySelectorAll('.home-hero-slide');
   if (!slides.length) return;
-
   let current = 0;
-  function nextSlide() {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }
-  setInterval(nextSlide, 4000);
 
-  function onScroll() {
-    const y = window.scrollY;
-    slides.forEach(function (s) {
-      s.style.transform = 'translateY(' + (y * 0.35) + 'px)';
-    });
+  function nextSlide() {
+    const prev = current;
+    current = (current + 1) % slides.length;
+
+    /* outgoing: slide out to left */
+    slides[prev].classList.add('exit');
+    slides[prev].classList.remove('active');
+
+    /* incoming: slide in from right */
+    slides[current].classList.add('active');
+
+    /* clean up after transition */
+    setTimeout(function () {
+      slides[prev].classList.remove('exit');
+    }, 650);
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
+
+  setInterval(nextSlide, 4000);
 })();
 
 const loader = document.getElementById('pageLoader');
