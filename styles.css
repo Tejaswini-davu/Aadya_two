@@ -1058,6 +1058,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   line-height: 1.02;
   color: #fff;
   margin: 0 0 20px;
+  white-space: nowrap;
   opacity: 0;
   animation: heroSlideUp 1s ease forwards;
   animation-delay: 1.35s;
