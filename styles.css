@@ -1031,7 +1031,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
 }
 /* card slides in from left edge, stops at centre */
 @keyframes heroCardSlideIn {
-  from { opacity: 0; transform: translate(calc(-50% - 100vw), -50%); }
+  from { opacity: 1; transform: translate(calc(-50% - 150vw), -50%); }
   to   { opacity: 1; transform: translate(-50%, -50%); }
 }
 /* text elements fade up inside the card after card arrives */
