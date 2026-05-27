@@ -1014,12 +1014,12 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   z-index: 0;
 }
 .home-hero-slide.active { opacity: 1; }
-/* green card — floats on the left, slides in from left edge */
+/* green card — centred, slides in from left edge */
 .home-hero-card {
   position: absolute;
   z-index: 2;
   top: 50%;
-  left: clamp(24px, 7vw, 110px);
+  left: 50%;
   background: #1e4d2b;
   color: #fff;
   padding: clamp(40px, 4.5vw, 64px) clamp(36px, 4vw, 60px);
@@ -1029,10 +1029,10 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   animation: heroCardSlideIn 1.1s cubic-bezier(.25,.46,.45,.94) forwards;
   animation-delay: .2s;
 }
-/* card slides in from the left edge of the screen */
+/* card slides in from left edge, stops at centre */
 @keyframes heroCardSlideIn {
-  from { opacity: 0; transform: translateY(-50%) translateX(-100%); }
-  to   { opacity: 1; transform: translateY(-50%) translateX(0); }
+  from { opacity: 0; transform: translate(calc(-50% - 100vw), -50%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
 }
 /* text elements fade up inside the card after card arrives */
 @keyframes heroSlideUp {
