@@ -1,13 +1,23 @@
-/* --- Hero parallax --- */
+/* --- Hero slideshow + parallax --- */
 (function () {
-  const heroBg = document.querySelector('.home-hero-bg');
-  if (!heroBg) return;
+  const slides = document.querySelectorAll('.home-hero-slide');
+  if (!slides.length) return;
+
+  let current = 0;
+  function nextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+  setInterval(nextSlide, 4000);
+
   function onScroll() {
     const y = window.scrollY;
-    heroBg.style.transform = 'translateY(' + (y * 0.35) + 'px)';
+    slides.forEach(function (s) {
+      s.style.transform = 'translateY(' + (y * 0.35) + 'px)';
+    });
   }
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 })();
 
 const loader = document.getElementById('pageLoader');
