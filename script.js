@@ -21,7 +21,7 @@
     }, 650);
   }
 
-  setInterval(nextSlide, 4000);
+  setInterval(nextSlide, 3000);
 })();
 
 const loader = document.getElementById('pageLoader');
