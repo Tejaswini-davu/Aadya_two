@@ -999,6 +999,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   justify-content: center;
   overflow: hidden;
   color: #fff;
+  background: #0f2016;
 }
 .home-hero-slides {
   position: absolute;
@@ -1014,6 +1015,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   opacity: 0;
   transition: opacity 1.2s ease;
   will-change: transform;
+  z-index: 0;
 }
 .home-hero-slide.active {
   opacity: 1;
@@ -1021,16 +1023,13 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
 .home-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(10,25,16,.52) 0%,
-    rgba(10,25,16,.62) 60%,
-    rgba(10,25,16,.80) 100%
-  );
+  z-index: 1;
+  background:
+    linear-gradient(to bottom, rgba(15,40,22,.60) 0%, rgba(15,40,22,.75) 60%, rgba(15,40,22,.90) 100%);
 }
 .home-hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   padding: clamp(100px, 14vw, 180px) var(--gutter) clamp(80px, 10vw, 140px);
   max-width: 860px;
@@ -1073,7 +1072,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
