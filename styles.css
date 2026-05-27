@@ -1014,22 +1014,29 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   z-index: 0;
 }
 .home-hero-slide.active { opacity: 1; }
-/* green card — floats on the left, vertically centred */
+/* green card — floats on the left, slides in from left edge */
 .home-hero-card {
   position: absolute;
   z-index: 2;
   top: 50%;
   left: clamp(24px, 7vw, 110px);
-  transform: translateY(-50%);
   background: #1e4d2b;
   color: #fff;
   padding: clamp(40px, 4.5vw, 64px) clamp(36px, 4vw, 60px);
   width: clamp(280px, 38vw, 440px);
   border-radius: 4px;
+  opacity: 0;
+  animation: heroCardSlideIn .8s cubic-bezier(.22,.68,0,1.2) forwards;
+  animation-delay: .1s;
 }
-/* slide-up entrance animation */
+/* card slides in from the left */
+@keyframes heroCardSlideIn {
+  from { opacity: 0; transform: translateY(-50%) translateX(-100%); }
+  to   { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+/* text elements fade up inside the card after card arrives */
 @keyframes heroSlideUp {
-  from { opacity: 0; transform: translateY(40px); }
+  from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .home-hero-eyebrow {
@@ -1041,8 +1048,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   color: rgba(255,255,255,.68);
   margin-bottom: 12px;
   opacity: 0;
-  animation: heroSlideUp .7s ease forwards;
-  animation-delay: .2s;
+  animation: heroSlideUp .6s ease forwards;
+  animation-delay: .75s;
 }
 .home-hero-card h1 {
   font-family: var(--serif);
@@ -1052,8 +1059,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   color: #fff;
   margin: 0 0 20px;
   opacity: 0;
-  animation: heroSlideUp .7s ease forwards;
-  animation-delay: .45s;
+  animation: heroSlideUp .6s ease forwards;
+  animation-delay: .95s;
 }
 .home-hero-card p {
   font-size: clamp(.88rem, 1.2vw, 1rem);
@@ -1061,8 +1068,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   color: rgba(255,255,255,.78);
   margin-bottom: 30px;
   opacity: 0;
-  animation: heroSlideUp .7s ease forwards;
-  animation-delay: .7s;
+  animation: heroSlideUp .6s ease forwards;
+  animation-delay: 1.15s;
 }
 .home-hero-cta {
   background: #e8630a;
@@ -1074,8 +1081,8 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   text-decoration: none;
   display: inline-block;
   opacity: 0;
-  animation: heroSlideUp .7s ease forwards;
-  animation-delay: .9s;
+  animation: heroSlideUp .6s ease forwards;
+  animation-delay: 1.35s;
   transition: background .22s, transform .22s;
 }
 .home-hero-cta:hover {
@@ -1083,6 +1090,10 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   transform: translateY(-2px);
 }
 @media (max-width: 640px) {
+  @keyframes heroCardSlideIn {
+    from { opacity: 0; transform: translateX(-100%); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
   .home-hero-card {
     top: auto;
     left: 16px;
