@@ -1044,19 +1044,20 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   -webkit-backdrop-filter: blur(6px);
   border-radius: 8px;
   padding: clamp(36px, 5vw, 64px) clamp(32px, 5vw, 72px);
-  max-width: 680px;
+  max-width: 900px;
   width: 100%;
   text-align: center;
   color: #fff;
 }
 .home-hero-card h1 {
   font-family: var(--serif);
-  font-size: clamp(4rem, 9vw, 8rem);
+  font-size: clamp(2.6rem, 6vw, 5.5rem);
   font-weight: 700;
-  line-height: 1.0;
+  line-height: 1.05;
   color: #fff;
   margin: 0 0 24px;
   letter-spacing: -.01em;
+  white-space: nowrap;
 }
 .home-hero-card p {
   font-size: clamp(.95rem, 1.5vw, 1.15rem);
