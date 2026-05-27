@@ -991,95 +991,71 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
 .home-page .loader-bar { background: rgba(233, 39, 25, .14); }
 .home-page .loader-bar span { background: var(--aadya-red); }
 /* ===== HOME HERO (OM Produce style) ===== */
+/* ===== HOME HERO — OM Produce style ===== */
 .home-hero {
   position: relative;
   min-height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  color: #fff;
   background: #0f2016;
 }
+/* full-bleed slideshow behind everything */
 .home-hero-slides {
   position: absolute;
   inset: 0;
   z-index: 0;
-  overflow: hidden;
 }
 .home-hero-slide {
   position: absolute;
-  inset: -15% 0;
+  inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 1.2s ease;
-  will-change: transform;
+  transition: opacity 1.4s ease;
   z-index: 0;
 }
-.home-hero-slide.active {
-  opacity: 1;
-}
-.home-hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: rgba(10,28,16,.45);
-}
-/* centered content wrapper */
-.home-hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 var(--gutter);
-}
-/* green card centered */
+.home-hero-slide.active { opacity: 1; }
+/* green card — floats on the left, vertically centred */
 .home-hero-card {
-  background: rgba(15,45,24,.82);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 8px;
-  padding: clamp(36px, 5vw, 64px) clamp(32px, 5vw, 72px);
-  max-width: min(92vw, 960px);
-  width: 100%;
-  text-align: center;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: clamp(24px, 7vw, 110px);
+  transform: translateY(-50%);
+  background: #1e4d2b;
   color: #fff;
-  box-sizing: border-box;
+  padding: clamp(40px, 4.5vw, 64px) clamp(36px, 4vw, 60px);
+  width: clamp(280px, 38vw, 440px);
+  border-radius: 4px;
 }
 .home-hero-eyebrow {
   display: block;
-  font-size: .8rem;
+  font-size: .74rem;
   font-weight: 700;
-  letter-spacing: .18em;
+  letter-spacing: .16em;
   text-transform: uppercase;
-  color: #f5c96a;
+  color: rgba(255,255,255,.68);
   margin-bottom: 12px;
 }
 .home-hero-card h1 {
   font-family: var(--serif);
-  font-size: clamp(2rem, 5.5vw, 5rem);
-  font-weight: 700;
-  line-height: 1.08;
+  font-size: clamp(2.6rem, 4.5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.02;
   color: #fff;
-  margin: 0 0 24px;
-  letter-spacing: -.01em;
+  margin: 0 0 20px;
 }
 .home-hero-card p {
-  font-size: clamp(.95rem, 1.5vw, 1.15rem);
-  line-height: 1.74;
-  color: rgba(255,255,255,.82);
-  margin-bottom: 36px;
+  font-size: clamp(.88rem, 1.2vw, 1rem);
+  line-height: 1.72;
+  color: rgba(255,255,255,.78);
+  margin-bottom: 30px;
 }
 .home-hero-cta {
   background: #e8630a;
   color: #fff;
   font-weight: 700;
-  font-size: .95rem;
-  padding: 15px 36px;
+  font-size: .88rem;
+  padding: 13px 28px;
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
@@ -1089,8 +1065,15 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   background: #cf5608;
   transform: translateY(-2px);
 }
-@media (max-width: 600px) {
-  .home-hero-card { padding: 32px 24px; }
+@media (max-width: 640px) {
+  .home-hero-card {
+    top: auto;
+    left: 16px;
+    right: 16px;
+    bottom: 28px;
+    transform: none;
+    width: auto;
+  }
 }
 .home-hero .eyebrow { color: var(--aadya-green); }
 .home-hero h1 {
