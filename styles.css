@@ -1027,7 +1027,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   z-index: 2;
   top: 50%;
   left: 50%;
-  background: #1e4d2b;
+  background: #2e6b3e;
   color: #fff;
   padding: clamp(40px, 4.5vw, 64px) clamp(36px, 4vw, 60px);
   width: clamp(280px, 38vw, 440px);
