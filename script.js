@@ -1,23 +1,23 @@
-/* --- Hero slideshow: slide in from right --- */
+/* --- Hero slideshow + parallax --- */
 (function () {
   const slides = document.querySelectorAll('.home-hero-slide');
   if (!slides.length) return;
+
   let current = 0;
-
   function nextSlide() {
-    const prev = current;
+    slides[current].classList.remove('active');
     current = (current + 1) % slides.length;
-
-    slides[prev].classList.remove('active');
-    slides[prev].classList.add('exit');
-    setTimeout(function () {
-      slides[prev].classList.remove('exit');
-    }, 900);
-
     slides[current].classList.add('active');
   }
+  setInterval(nextSlide, 4000);
 
-  setInterval(nextSlide, 4500);
+  function onScroll() {
+    const y = window.scrollY;
+    slides.forEach(function (s) {
+      s.style.transform = 'translateY(' + (y * 0.35) + 'px)';
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
 const loader = document.getElementById('pageLoader');
