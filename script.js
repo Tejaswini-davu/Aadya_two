@@ -1,3 +1,15 @@
+/* --- Hero parallax --- */
+(function () {
+  const heroBg = document.querySelector('.home-hero-bg');
+  if (!heroBg) return;
+  function onScroll() {
+    const y = window.scrollY;
+    heroBg.style.transform = 'translateY(' + (y * 0.35) + 'px)';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
 const loader = document.getElementById('pageLoader');
 window.addEventListener('load', () => {
   window.setTimeout(() => loader && loader.classList.add('done'), 750);
