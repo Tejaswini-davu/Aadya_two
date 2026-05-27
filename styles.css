@@ -1027,6 +1027,11 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   width: clamp(280px, 38vw, 440px);
   border-radius: 4px;
 }
+/* slide-up entrance animation */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 .home-hero-eyebrow {
   display: block;
   font-size: .74rem;
@@ -1035,6 +1040,9 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   text-transform: uppercase;
   color: rgba(255,255,255,.68);
   margin-bottom: 12px;
+  opacity: 0;
+  animation: heroSlideUp .7s ease forwards;
+  animation-delay: .2s;
 }
 .home-hero-card h1 {
   font-family: var(--serif);
@@ -1043,12 +1051,18 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   line-height: 1.02;
   color: #fff;
   margin: 0 0 20px;
+  opacity: 0;
+  animation: heroSlideUp .7s ease forwards;
+  animation-delay: .45s;
 }
 .home-hero-card p {
   font-size: clamp(.88rem, 1.2vw, 1rem);
   line-height: 1.72;
   color: rgba(255,255,255,.78);
   margin-bottom: 30px;
+  opacity: 0;
+  animation: heroSlideUp .7s ease forwards;
+  animation-delay: .7s;
 }
 .home-hero-cta {
   background: #e8630a;
@@ -1059,6 +1073,9 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
+  opacity: 0;
+  animation: heroSlideUp .7s ease forwards;
+  animation-delay: .9s;
   transition: background .22s, transform .22s;
 }
 .home-hero-cta:hover {
