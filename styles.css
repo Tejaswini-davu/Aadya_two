@@ -1026,12 +1026,12 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   width: clamp(280px, 38vw, 440px);
   border-radius: 4px;
   opacity: 0;
-  animation: heroCardSlideIn .8s cubic-bezier(.22,.68,0,1.2) forwards;
-  animation-delay: .1s;
+  animation: heroCardSlideIn 1.1s cubic-bezier(.25,.46,.45,.94) forwards;
+  animation-delay: .2s;
 }
-/* card slides in from the left */
+/* card slides in from the right edge of the screen */
 @keyframes heroCardSlideIn {
-  from { opacity: 0; transform: translateY(-50%) translateX(-100%); }
+  from { opacity: 0; transform: translateY(-50%) translateX(100vw); }
   to   { opacity: 1; transform: translateY(-50%) translateX(0); }
 }
 /* text elements fade up inside the card after card arrives */
@@ -1091,7 +1091,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
 }
 @media (max-width: 640px) {
   @keyframes heroCardSlideIn {
-    from { opacity: 0; transform: translateX(-100%); }
+    from { opacity: 0; transform: translateX(100vw); }
     to   { opacity: 1; transform: translateX(0); }
   }
   .home-hero-card {
