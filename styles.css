@@ -1024,57 +1024,52 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to right, rgba(10,30,16,.85) 0%, rgba(10,30,16,.45) 55%, rgba(10,30,16,.10) 100%);
+  background: rgba(10,28,16,.45);
 }
-/* inner wrapper — full height flex row */
-.home-hero-inner {
+/* centered content wrapper */
+.home-hero-content {
   position: relative;
   z-index: 2;
   width: 100%;
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: 0 clamp(24px, 6vw, 100px);
+  justify-content: center;
+  padding: 0 var(--gutter);
 }
-/* green card on left */
+/* green card centered */
 .home-hero-card {
   background: rgba(15,45,24,.82);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  border-radius: 6px;
-  padding: clamp(32px, 5vw, 60px) clamp(28px, 4vw, 52px);
-  max-width: 420px;
+  border-radius: 8px;
+  padding: clamp(36px, 5vw, 64px) clamp(32px, 5vw, 72px);
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
   color: #fff;
-}
-.home-hero-card-eyebrow {
-  display: block;
-  font-size: clamp(.95rem, 1.4vw, 1.15rem);
-  font-weight: 600;
-  color: rgba(255,255,255,.88);
-  margin-bottom: 4px;
-  font-family: var(--serif);
 }
 .home-hero-card h1 {
   font-family: var(--serif);
-  font-size: clamp(3.8rem, 8vw, 7rem);
-  font-weight: 800;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 700;
   line-height: 1.0;
   color: #fff;
-  margin: 0 0 20px;
+  margin: 0 0 24px;
   letter-spacing: -.01em;
 }
 .home-hero-card p {
-  font-size: clamp(.9rem, 1.3vw, 1.05rem);
-  line-height: 1.72;
-  color: rgba(255,255,255,.80);
-  margin-bottom: 32px;
+  font-size: clamp(.95rem, 1.5vw, 1.15rem);
+  line-height: 1.74;
+  color: rgba(255,255,255,.82);
+  margin-bottom: 36px;
 }
 .home-hero-cta {
   background: #e8630a;
   color: #fff;
   font-weight: 700;
   font-size: .95rem;
-  padding: 14px 32px;
+  padding: 15px 36px;
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
@@ -1085,8 +1080,7 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.05; letter-spacing: -.02e
   transform: translateY(-2px);
 }
 @media (max-width: 600px) {
-  .home-hero-card { max-width: 100%; }
-  .home-hero-inner { padding: 0 20px; }
+  .home-hero-card { padding: 32px 24px; }
 }
 .home-hero .eyebrow { color: var(--aadya-green); }
 .home-hero h1 {
